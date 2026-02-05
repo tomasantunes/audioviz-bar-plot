@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audioviz - Bars</title>
+	
+	<style>
+	
+	body {
+		margin: 0;
+		height: 100vh;
+		overflow: hidden;
+	}
+	
+	#content {
+		height: 100vh;
+		margin: 0 auto;
+	}
+
+	#play-btn {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	
+	</style>
+</head>
+<body>
+	<div id="content"></div>
+	<button id="play-btn">Play</button>
+
+	<script src="../dist/audioviz-bars.min.js"></script>
+	<script>
+
+		var play = document.getElementById("play-btn");
+
+		play.onclick = function() {
+			var av = new audiovizBars({
+				element: 'content',          // id of container html element
+				audioPath: 'GroovyBaby.mp3', // local file path, example music from Audionautix.com
+				totalBars: 32,               // examples: 16, 32, 64, 128
+				backgroundColor: "#231f20",  // hex, RGB or RGBA
+				barsColor: "#f0ad00",        // hex, RGB or RGBA
+				gapSize: 10,                 // pixels
+			});
+
+			setTimeout(function() {
+				av.changeTrack('Namaste.mp3');
+			}, 15000);
+		}
+		
+	</script>
+	
+</body>
+</html>
