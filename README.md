@@ -1,4 +1,4 @@
-# audioviz-bars
+# audioviz-bar-plot
 Javascript audio visualization with frequency bar plot.
 
 ![Screenshot](https://i.imgur.com/l51Y6tq.png)
